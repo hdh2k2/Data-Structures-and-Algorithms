@@ -9,11 +9,11 @@ struct NODE{
 
 typedef struct NODE node;
 
-node*create_new_node(int data){
+node*create_new_node(int x){
     node *temp = new node;
     if ( temp== NULL)
         exit(1);
-    temp->data = data;
+    temp->data = x;
     temp->next = NULL;
     return temp;
 }
@@ -24,7 +24,7 @@ struct LIST{
 };
 typedef struct LIST list;
 
-void init_LIST(list l){
+void init_LIST(list& l){
     l.head = NULL;
     l.tail = NULL;
 }
@@ -32,7 +32,7 @@ void init_LIST(list l){
 void addHead(list&l, node*p){
     if ( l.head == NULL){
         l.head = p;
-        l.tail = p;
+        l.tail = l.head;
     }
 
     else{
@@ -44,12 +44,23 @@ void addHead(list&l, node*p){
 void addTail(list&l, node *p){
     if (l.head == NULL){
         l.head = p;
-        l.tail = p;
+        l.tail = l.head;
     }
 
     else {
         l.tail->next = p;
         l.tail = p;
+    }
+}
+
+void input_list(list&l, int n ){
+    for (int i = 0; i < n ; i++){
+        cout << "Input element " << i + 1  << ": ";
+        int x;
+        cin >> x;
+        node *temp = create_new_node(x);
+        addTail(l, temp);
+        
     }
 }
 
@@ -59,16 +70,59 @@ void printf_list(list l){
     }
 }
 
+void remove_node_head(list&l){
+    if ( l.head == NULL)
+        cout << "List empty !!!";
+    else{
+        node *p = l.head;
+        l.head = l.head->next;
+        delete p; 
+    }
+    
+}
+
+
+void remove_list(list&l){
+    node *p = new node;
+    while (l.head!=NULL){
+        p = l.head;
+        l.head = l.head->next;
+        delete p;
+    }
+
+    l.tail = NULL;
+}
+
+bool linear_search(list l, int x){
+    node *p = create_new_node(x);
+    
+    for (node *tral = l.head; tral != NULL; tral= tral->next)
+        if ( tral->data == x)
+            return true;
+    return false;
+}
+
+
 int main(){
     system("cls");
     list l;
     init_LIST(l);
-    node *p = create_new_node(5);
-   // addHead(l, p);
-   // addHead(l, p);
-   // addHead(l, p);
-    addTail(l, p);
-    delete p;
+    int n;
+    cout << "Enter the maximum number of elements of list: ";
+    cin >> n;
+    input_list(l, n);
+    cout << "\nFull list: ";
     printf_list(l);
+
+    cout << "\nList after remove head: ";
+    remove_node_head(l);
+    printf_list(l);
+
+// code for search algorithms
+    cout << "\nInput a element to find in list: ";
+    int x;
+    cin >> x;
+    cout << x << " in list: ";
+    cout <<  (linear_search(l, x) == 1 ? "YES" : "NO");
     system("pause");
 }
