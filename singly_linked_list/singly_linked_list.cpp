@@ -72,7 +72,7 @@ void printf_list(list l){
 
 void remove_node_head(list&l){
     if ( l.head == NULL)
-        cout << "List empty !!!";
+        cout << "List is empty !!!";
     else{
         node *p = l.head;
         l.head = l.head->next;
