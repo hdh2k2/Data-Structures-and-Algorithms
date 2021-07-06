@@ -1,5 +1,7 @@
 #include<iostream>
 #define deu 100
+#define loop(n) for (int i = 0; i < n; i ++)
+#define check(a,b, c) while (a>=0 && b < c)
 
 using namespace std;
 
@@ -7,10 +9,10 @@ int a[deu];
 
 void insertion_sort(int a[],int n){ // Sort up ascending
     int key,j;
-    for (int i = 1; i < n; i++){
+    loop(n){
         key = a[i];
         j = i - 1;
-        while(j >= 0 && key <a[j]){
+        check(j,key,a[j]){
             a[j + 1] = a[j];
             j--;
         }
