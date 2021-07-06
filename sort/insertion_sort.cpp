@@ -2,6 +2,8 @@
 #define deu 100
 #define loop(n) for (int i = 0; i < n; i ++)
 #define check(a,b, c) while (a>=0 && b < c)
+#define cls system("cls")
+#define pause system("pause")
 
 using namespace std;
 
@@ -23,20 +25,19 @@ void insertion_sort(int a[],int n){ // Sort up ascending
 void init_array(int a[], int &n){
     cout << "Input a number of element: ";
     cin >> n;
-    for (int i = 0; i < n; i ++){
+    loop(n){
         cout << "Input element " << i + 1 << ": ";
         cin >> a[i];
     }
 }
 
 void printf_array(int a[],int n){
-    for (int i = 0; i < n; i ++)
+    loop(n)
         cout << a[i] << " ";
 }
 
 int main(){
-    system("cls");
-    
+    cls;
     int n;
     init_array(a, n);
 
@@ -45,5 +46,5 @@ int main(){
     cout << "\nArray after sort: ";
     insertion_sort(a, n);
     printf_array(a, n);
-    system("pause");
+    pause;
 }
