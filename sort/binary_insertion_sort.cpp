@@ -1,7 +1,4 @@
-#include<iostream>
-#define deu 100
-
-using namespace std;
+#include"library.h"
 
 int a[deu];
 
@@ -29,7 +26,6 @@ void binary_insertion_sort(int a[],int n){ // Sort up ascending
                 right = mid - 1;
             else
                 left = mid + 1;
-
         }
 
         for (int j = i - 1; j >= left; j --)
@@ -41,27 +37,25 @@ void binary_insertion_sort(int a[],int n){ // Sort up ascending
 void init_array(int a[], int &n){
     cout << "Input a number of element: ";
     cin >> n;
-    for (int i = 0; i < n; i ++){
+    loop_Ascending(0,n){
         cout << "Input element " << i + 1 << ": ";
         cin >> a[i];
     }
 }
 
 void printf_array(int a[],int n){
-    for (int i = 0; i < n; i ++)
+    loop_Ascending(0,n)
         cout << a[i] << " ";
 }
 
 int main(){
-    system("cls");
-    
+    cls;
     int n;
     init_array(a, n);
-
     cout << "Array before sort: ";
     printf_array(a, n);
     cout << "\nArray after sort: ";
     binary_insertion_sort(a, n);
     printf_array(a, n);
-    system("pause");
+    pause;
 }

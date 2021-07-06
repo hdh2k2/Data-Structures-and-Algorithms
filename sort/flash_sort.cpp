@@ -1,9 +1,4 @@
-#include<iostream>
-#include<cmath>
-
-#define deu 100
-
-using namespace std;
+#include"library.h"
 
 int a[deu];
 
@@ -25,11 +20,11 @@ void flash_sort(int a[],int n){ // Sort up ascending
     int min = a[0];
     for (int i = 1; i < n; i++){
         if ( a[i] < min){
-            min = a[i];
+            min = a[i]; 
         }
 
-        if ( a[i] > max){
-            max = a[i];
+        if ( a[i] > max){ 
+            max = a[i]; 
         }
     }
 

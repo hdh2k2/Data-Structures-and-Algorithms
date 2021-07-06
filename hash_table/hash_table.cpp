@@ -25,8 +25,7 @@ void insert(string s){
     while(hash_table[index] != ""){
         index = (index + 1) % HASH_TABLE_SIZE;
     }
-
-    hash_table[index] = s;
+    hash_table[index] = s; 
 }
 
 int search(string s){

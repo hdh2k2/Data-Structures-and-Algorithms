@@ -1,7 +1,4 @@
-#include<iostream>
-#define deu 100
-
-using namespace std;
+#include"library.h"
 
 int a[deu];
 
@@ -63,8 +60,7 @@ void printf_array(int a[],int n){
 }
 
 int main(){
-    system("cls");
-    
+    cls;
     int n;
     init_array(a, n);
 
@@ -73,5 +69,5 @@ int main(){
     cout << "\nArray after sort: ";
     merge_sort(a, 0, n - 1);
     printf_array(a, n);
-    system("pause");
+    pause;
 }

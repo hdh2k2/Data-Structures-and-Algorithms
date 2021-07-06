@@ -1,14 +1,10 @@
-#include<iostream>
-#define deu 100
-
-using namespace std;
+#include"library.h"
 
 int a[deu];
 
 bool binary_search(int a[], int n, int x){
     int left, right, mid;
-
-    left = 0; right = n - 1; // init 
+    left = 0; right = n; // init index of element
     while (left <=right){
         mid = (left + right) / 2;
         if ( a[mid] > x )
@@ -18,24 +14,25 @@ bool binary_search(int a[], int n, int x){
         else if ( a[mid] == x)
             return true;
     }
-
     return false;
 }
 
-int main(){
-    system("cls");
-    int n, x;
+void init_array(int a[], int &n){
     cout << "Input a number of element: ";
     cin >> n;
-    for (int i = 0; i < n; i ++){
+    loop_Ascending(0,n){
         cout << "Input element " << i + 1 << ": ";
         cin >> a[i];
     }
+}
 
+int main(){
+    cls;
+    int n, x;
+    init_array(a, n);
     cout << "Input a number to find in array: ";
     cin >> x;
     cout << x << " in array: ";
-    cout <<  (binary_search(a, n, x) == 1 ? "YES" : "NO");
-    system("pause");
-
+    cout <<  (binary_search(a, n, x) == true ? "YES" : "NO");
+    pause;
 }
