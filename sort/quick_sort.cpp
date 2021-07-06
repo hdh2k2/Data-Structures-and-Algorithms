@@ -20,8 +20,8 @@ int partition(int a[], int left, int right){
         if ( a[i] < pivot){
             index++;
             swap(a[index], a[i]);
-        }
-    }
+        }                                      
+    } 
     index++;
     swap(a[index], a[right]);
     return index;

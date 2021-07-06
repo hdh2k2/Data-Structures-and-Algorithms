@@ -7,7 +7,7 @@ void insertion_sort(int a[],int n){ // Sort up ascending
     loop_Ascending(0,n){
         key = a[i];
         j = i - 1;
-        check(j,key,a[j]){
+        loop_while(j,key,a[j]){
             a[j + 1] = a[j];
             j--;
         }
