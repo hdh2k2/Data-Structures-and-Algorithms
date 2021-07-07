@@ -30,7 +30,7 @@ void init_array(int a[], int &n){
     cout << "Input a number of element: ";
     cin >> n;
     loop_Ascending(0,n){
-        cout << "Input element " << i + 1 << ": ";
+        cout << "Input element " << i + 1 << ": "; 
         cin >> a[i];
     }
 }

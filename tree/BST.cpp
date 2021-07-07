@@ -85,7 +85,6 @@ bool search_node_without_recursive(tree t, int x){
         if ( p ->data > t->data)
             t = t->right;
     }
-
     return false;
 }
 

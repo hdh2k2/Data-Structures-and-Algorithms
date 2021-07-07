@@ -42,7 +42,7 @@
 
     #define loop_Ascending(j,n) for (int i = j; i < n; i ++)
     #define loop_Descending (j,n) for (int i = n ; i > j; i --)
-    #define check(a,b, c) while (a>=0 && b < c)
+    #define loop_while(a,b, c) while (a>=0 && b < c)
     #define cls system("cls")
     #define pause system("pause")
 
