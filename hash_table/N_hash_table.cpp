@@ -40,7 +40,7 @@ using namespace std;
         #if 0  
             void insert(lli n){
                 cin >> n;
-                int index = hash_function(n);
+                lli index = hash_function(n);
                 while(hash_table[index] != 0 && hash_table[index] != -1){
                     index = (index + 1) % HASH_TABLE_SIZE;
                 }
@@ -95,8 +95,8 @@ using namespace std;
             }
         #endif // Modified Linear Probing Method, fix " primary clustering " from " Linear Probing Method "
 
-        #if 0   
-            #if 0 
+        #if 1   
+            #if 1 
                 void insert(lli n){ 
                     cin >> n;
                     int k = 1;
