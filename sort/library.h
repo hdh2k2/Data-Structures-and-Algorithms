@@ -48,6 +48,31 @@
 
 
 
+#if 1
+    
+    void SWAP (int &element1, int &element2){
+		element1 ^= element2 ^= element1 ^= element2;
+	}
+
+#endif //command for swap function
+
+#if 1
+
+	void init_array(int a[], int &n){
+		std::cout << "Input a number of element: ";
+		std::cin >> n;
+		for (int i = 0; i < n; i ++){
+			std::cout << "Input element " << i + 1 << ": ";
+			std::cin >> a[i];
+		}
+	}
+
+	void printf_array(int a[],int n){
+		for (int i = 0; i < n; i ++)
+			std::cout << a[i] << " ";
+	}
+
+#endif // command for init and print data of array 
 
 // #include <boost/multiprecision/cpp_int.hpp>
 // #include <boost/math/constants/constants.hpp>

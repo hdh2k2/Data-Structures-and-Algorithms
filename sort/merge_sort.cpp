@@ -2,17 +2,6 @@
 
 int a[deu];
 
-#if 0
-    
-    void swap (int &element1, int &element2){
-        int temp;
-        temp = element1;
-        element1= element2;
-        element2= temp;
-    }
-
-#endif //command for swap function
-
 void merge(int a[], int left, int mid, int right){
     int *temp = new int[right - left + 1];
     int m;
@@ -45,28 +34,14 @@ void merge_sort(int a[],int left, int right){ // Sort up ascending
     }
 }
 
-void init_array(int a[], int &n){
-    cout << "Input a number of element: ";
-    cin >> n;
-    for (int i = 0; i < n; i ++){
-        cout << "Input element " << i + 1 << ": ";
-        cin >> a[i];
-    }
-}
-
-void printf_array(int a[],int n){
-    for (int i = 0; i < n; i ++)
-        cout << a[i] << " ";
-}
-
 int main(){
     cls;
     int n;
     init_array(a, n);
 
-    cout << "Array before sort: ";
+    cout << "Array before sorting: ";
     printf_array(a, n);
-    cout << "\nArray after sort: ";
+    cout << "\nArray after sorting: ";
     merge_sort(a, 0, n - 1);
     printf_array(a, n);
     pause;
