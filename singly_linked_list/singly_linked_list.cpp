@@ -71,14 +71,80 @@ void printf_list(list l){
 }
 
 void remove_node_head(list&l){
-    if ( l.head == NULL)
+    if ( l.head == NULL){
         cout << "List is empty !!!";
+        return;
+    }
     else{
         node *p = l.head;
         l.head = l.head->next;
-        delete p; 
+        delete p;  
     }
     
+}
+
+
+void remove_node_tail(list&l){
+    if ( l.head == NULL){
+        cout << "List is empty !!!";
+        return;
+    }
+    else{
+        for (node *tral = l.head; tral != NULL;tral = tral -> next){
+            if ( tral->next == l.tail){
+                delete l.tail;
+                tral->next = NULL;
+                l.tail = tral; //  update node tail
+            }
+        }
+    }
+    
+}
+
+void remove_any_node(list &l, node*temp){
+   if ( l.head == NULL){
+        cout << "List is empty !!!";
+        return;
+    }
+    else if (l.head->data== temp->data){
+        remove_node_head(l);
+    }
+
+    else if (l.tail->data== temp->data){
+        remove_node_tail(l);
+    }
+
+    else {
+        for (node *tral = l.head; tral ->next!=NULL; tral = tral->next){
+            if ( tral->data == temp->data){
+                node *_to_delete = new node;
+                _to_delete =create_new_node(tral->data);
+                tral = tral->next;
+                delete _to_delete;
+            }
+        }
+    }
+}
+
+void remove_one_node_after_one_node(list&l, node*temp){
+    if ( l.head == NULL){
+        cout << "List is empty !!!";
+        return;
+    }
+    else if (temp->data == l.tail->data)
+        cout << "Cannot delete any node after temp !!!";
+    else{
+        node *tral = l.head;
+        while(tral->next!=NULL){
+            if ( tral->data == temp ->data){
+                node *_to_DELETE = new node;
+                _to_DELETE = tral->next;
+                tral->next = _to_DELETE->next;
+                //delete _to_DELETE;
+            }
+            tral = tral->next;
+        }
+    }
 }
 
 
@@ -116,6 +182,9 @@ int main(){
 
     cout << "\nList after remove head: ";
     remove_node_head(l);
+    remove_node_tail(l);
+    //ode *ttt = create_new_node(3);
+    //remove_node(l, ttt);
     printf_list(l);
 
 // code for search algorithms
