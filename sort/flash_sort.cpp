@@ -3,75 +3,83 @@
 int a[deu];
 
 void flash_sort(int a[],int n){ // Sort up ascending
-    int m = int (0.45 * n);
-    int *temp = new int[n];
-    int max = 0;
-    int min = a[0];
-    for (int i = 1; i < n; i++){
-        if ( a[i] < min){
-            min = a[i]; 
+    double scaleFactor = 0.1;
+    int *l, nmin, nmax, i, j, k, nmove;
+    // m is usually chosen to be 0.1 * n
+    const size_t m = int(scaleFactor * n);
+
+        l = (int *)calloc(m, sizeof(int));
+    nmin = 0;
+    nmax = 0;
+    for (i = 0; i < n; i++){
+        if (a[i] < a[nmin]) {
+            nmin = i;
         }
-
-        if ( a[i] > max){ 
-            max = a[i]; 
+        if (a[i] > a[nmax]) {
+            nmax = i;
         }
     }
-
-    for (int i = 0; i < n ; i++)
-        temp[i] = 0;
-
-
-    for (int i = 0; i < n; i++){
-        int k = int((m - 1) * (a[i] - min) / (max - min));
-        temp[k]++;
+    if (a[nmax] == a[nmin]) {
+        // array is sorted (max = min)
+        return; 
     }
 
-    for (int i = 0; i < m;i ++){
-        temp[i] = temp[i] + temp[i - 1];
+    int c1 = double(m - 1.0) / double(a[nmax] - a[nmin]);
+    int min = a[nmin];
+
+    for (i = 0; i < n; ++i){
+        k = int(c1 * (a[i] - min));
+        ++l[k];
     }
 
-    
-    int hold = 0;
-    int move = 0;
-    int flash = 0;
-    int k = 0;
-    int t = 0;
-    int j = 0;
-    while (move < n - 1){
-        while(j > (temp[k] - 1)){
+    for (k = 1; k < m; ++k){
+        l[k] += l[k - 1];
+    }
+
+    int hold = a[nmax];
+    a[nmax] = a[0];
+    a[0] = hold;
+
+    int flash;
+    nmove = 0;
+    j = 0;
+    k = m - 1;
+
+    while (nmove < n - 1){
+        while (j > l[k] - 1){
             j++;
-            k = int((m - 1) * (a[j] - min) / (max - min));
+            k = int(c1 * (a[j] - min));
         }
+
         flash = a[j];
-        if (k < 0 ) break;
-        while(j!=  temp[k]){
-            k = int((m - 1) * (a[j] - min) / (max - min));
-            hold = a[t = --temp[j]];
-            a[t] = hold;
+        while (j != l[k]){
+            k = int(c1 * (flash - min));
+            l[k]--;
+            hold = a[l[k]];
+            a[l[k]] = flash;
             flash = hold;
+            nmove++;
         }
     }
 
-
-    for (int j = 1; j < n; j ++ ){
-        hold = a[j];
-        int i = j - 1;
-        while(i>=0&&a[i]>hold){
-            a[i + 1] = a[i - 1];
-            i--;
+    for (i = 1; i < n; ++i){
+        hold = a[i];
+        j = i - 1;
+        while (j >= 0 && hold < a[j]){
+            a[j + 1] = a[j];
+            j--;
         }
-        a[i + 1] = hold;
+
+        a[j + 1] = hold;
     }
 
-    
+    free(l);
 }
 
 int main(){
     system("cls");
-    
     int n;
     init_array(a, n);
-
     cout << "Array before sorting: ";
     printf_array(a, n);
     cout << "\nArray after sorting: ";
