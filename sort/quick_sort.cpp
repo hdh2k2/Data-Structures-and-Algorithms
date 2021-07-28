@@ -3,7 +3,7 @@
 int a[deu];
 
 int partition(int a[], int left, int right){
-    int pivot = a[right ];
+    int pivot = a[right];
     int index = left - 1;
     for (int i = left; i <=right - 1 ; i ++){
         if ( a[i] < pivot){
