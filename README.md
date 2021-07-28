@@ -3,56 +3,64 @@
 
 ```sh
 
-Search algorithms:
-    - Linear search
-    - Binary search
-    - Interpolation search
-    - Jump search
-Sort algorithms:
-    - Normal:
-        + Insertion sort 
-        + Binary insertion sort
-        + Bubble sort
-        + Interchange sort
-        + Shaker sort 
-    - Medium:
-        + Heap sort
-        + Merge sort
-        + Quick sort
-        + Radix sort
-        + Shell sort
-    - Hard:
-        + Counting sort
-        + Flash sort
-List structures:
-    - Singly linked list
-    - Stack in linked list 
-Tree structures:
-    - Binary search tree
-    - Adelson-Velsky and Landis tree (AVL)
-    - Red black tree
-Hashing: 
-    - Hashtable for number
-    - Hashtable for string
-Graph:
-    - Breadth-first search 
-    - Depth-first search
-Miscellaneous bitwise hacking:
-    - Swap bits
-    - Convert
-    - Some problem
+Algorithms:
+    Search algorithms:
+        - Linear search
+        - Binary search
+        - Interpolation search
+        - Jump search
+    Sort algorithms:
+        - Normal:
+            + Insertion sort 
+            + Binary insertion sort
+            + Bubble sort
+            + Interchange sort
+            + Shaker sort 
+        - Medium:
+            + Heap sort
+            + Merge sort
+            + Quick sort
+            + Radix sort
+            + Shell sort
+        - Hard:
+            + Counting sort
+            + Flash sort
+    Hashing: 
+        - Hashtable for number
+        - Hashtable for string
+
+    Miscellaneous bitwise hacking:
+        - Swap bits
+        - Convert
+        - Some problem
+
+Data structures:
+    List structures:
+        - Singly linked list
+        - Stack in linked list 
+    Tree structures:
+        - Binary search tree
+        - Adelson-Velsky and Landis tree (AVL)
+        - Red black tree
+    Graph:
+        - Breadth-first search 
+        - Depth-first search
 
 ```
 # **LEARN MORE:**
+- Algorithms
 
-[Search algorithms](https://github.com/hdh2k2/Data-Structures-and-Algorithms/blob/master/search/README.md)
+    - [Search algorithms](https://github.com/hdh2k2/Data-Structures-and-Algorithms/blob/master/Algorithms/Search/README.md)
 
-[Sort algorithms](https://github.com/hdh2k2/Data-Structures-and-Algorithms/blob/master/sort/README.md)
+    - [Sort algorithms](https://github.com/hdh2k2/Data-Structures-and-Algorithms/blob/master/Algorithms/Sort/README.md)
 
-[Linked list](https://github.com/hdh2k2/Data-Structures-and-Algorithms/blob/master/singly_linked_list/README.md)
+    - [Hashtable](https://github.com/hdh2k2/Data-Structures-and-Algorithms/blob/master/Algorithms/Hash/hash_table/README.md)
 
-[Tree structure](https://github.com/hdh2k2/Data-Structures-and-Algorithms/blob/master/tree/README.md)
+- Data structures
 
-[Hashtable](https://github.com/hdh2k2/Data-Structures-and-Algorithms/blob/master/hash/hash_table/README.md)
+    - [Linked list](https://github.com/hdh2k2/Data-Structures-and-Algorithms/blob/master/Data%20Structures/Linked_list/README.md)
 
-[Graph](https://github.com/hdh2k2/Data-Structures-and-Algorithms/blob/master/graph/README.md)
+    - [Tree structure](https://github.com/hdh2k2/Data-Structures-and-Algorithms/blob/master/Data%20Structures/Tree/README.md)
+
+
+    - [Graph](https://github.com/hdh2k2/Data-Structures-and-Algorithms/blob/master/Data%20Structures/Graph/README.md)
