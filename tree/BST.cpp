@@ -44,6 +44,14 @@ void preorder(tree t){ // Node_Left_Right
     }
 }
 
+void preorder_BB(tree t){ // Node_Right_Left
+    if (t != NULL){
+        cout << t->data << "\t";
+        preorder(t->right);
+        preorder(t->left);
+    }
+}
+
 void inorder(tree t) { // Left_Node_Right
     if ( t!= NULL){
         inorder(t->left);
@@ -152,6 +160,10 @@ int main(){
     //  command for browsing tree
     cout << "\nBrowsing tree focus preorder: ";
     preorder(t);
+
+    cout << "\nBrowsing tree focus preorder_BB: ";
+    preorder_BB(t);
+
 
     cout << "\nBrowsing tree focus inorder: ";
     inorder(t);
