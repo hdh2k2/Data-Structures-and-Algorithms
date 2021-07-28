@@ -2,8 +2,7 @@
 
 Collection of common data structures and algorithms that I studied in school
 
-# **Topics Covered:**
-
+## **Topics Covered:**
 ```sh
 
 Algorithms:
@@ -50,7 +49,7 @@ Data structures:
         - Depth-first search
 
 ```
-# **Learn more:**
+## **Learn more:**
 - Algorithms
 
     - [Search algorithms](https://github.com/hdh2k2/Data-Structures-and-Algorithms/blob/master/Algorithms/Search/README.md)
