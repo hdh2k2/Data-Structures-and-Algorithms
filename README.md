@@ -1,5 +1,8 @@
-# **Topics Covered:**
+# **Data-Structures-and-Algorithms**
 
+Collection of common data structures and algorithms that I studied in school
+
+# **Topics Covered:**
 
 ```sh
 
@@ -16,16 +19,16 @@ Algorithms:
             + Bubble sort
             + Interchange sort
             + Shaker sort 
-        - Medium:
-            + Heap sort
-            + Merge sort
-            + Quick sort
-            + Radix sort
-            + Shell sort
-        - Hard:
-            + Counting sort
-            + Flash sort
-    Hashing: 
+        - Medium:                                   ───▄▀▀▀▄▄▄▄▄▄▄▀▀▀▄───
+            + Heap sort                             ───█▒▒░░░░░░░░░▒▒█───
+            + Merge sort                            ────█░░█░░░░░█░░█────
+            + Quick sort                            ─▄▄──█░░░▀█▀░░░█──▄▄─
+            + Radix sort                            █░░█─▀▄░░░░░░░▄▀─█░░█
+            + Shell sort                            █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█
+        - Hard:                                     █░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█
+            + Counting sort                         █░░║║║╠─║─║─║║║║║╠─░░█ 
+            + Flash sort                            █░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█
+    Hashing:                                        █▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█       
         - Hashtable for number
         - Hashtable for string
 
@@ -47,7 +50,7 @@ Data structures:
         - Depth-first search
 
 ```
-# **LEARN MORE:**
+# **Learn more:**
 - Algorithms
 
     - [Search algorithms](https://github.com/hdh2k2/Data-Structures-and-Algorithms/blob/master/Algorithms/Search/README.md)
