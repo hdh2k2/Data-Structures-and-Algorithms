@@ -1,3 +1,10 @@
+/*
+
+    Problem: Find the number that appears perhaps times in the array
+    Constraint: In the given array, there is only one number that appears odd times, all the other numbers appear even times.
+
+*/
+
 #include <iostream>
 #include<unordered_map>
 #include<vector>

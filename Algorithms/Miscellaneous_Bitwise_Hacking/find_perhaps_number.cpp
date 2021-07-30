@@ -1,3 +1,10 @@
+/*
+
+    Problem: Count the number of numbers appearing odd times in the array
+    Constraint: None.
+
+*/
+
 #include<iostream>
 #include<vector>
 #include<unordered_map>
@@ -26,6 +33,6 @@ int main() {
     for (auto m : map)
         if (m.second & 1)
             res++;
-    cout <<"There are " << res << " numbers that appear maybe times in the array.";
+    cout <<"There are " << res << " number of numbers appearing odd times in the array.";
     pause;
 }
