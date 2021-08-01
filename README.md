@@ -56,6 +56,8 @@ Data structures:
 
     - [Sort algorithms](https://github.com/hdh2k2/Data-Structures-and-Algorithms/blob/master/Algorithms/Sort/README.md)
 
+    - [Graph](https://github.com/hdh2k2/Data-Structures-and-Algorithms/blob/master/Algorithms/Graph/README.md)
+
     - [Hashtable](https://github.com/hdh2k2/Data-Structures-and-Algorithms/blob/master/Algorithms/Hash/hash_table/README.md)
 
 - Data structures
